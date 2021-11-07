@@ -6,7 +6,7 @@ void printMatches(Iterable<RegExpMatch> matches) {
     printMatch(match);
   }
   if (matches.isNotEmpty) {
-    print('}');
+    print('} : ${matches.length}개 일치');
   }
 }
 
