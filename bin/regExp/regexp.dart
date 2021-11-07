@@ -1,5 +1,7 @@
 import 'dart:core';
 
+import 'print_match.dart';
+
 void main() {
   // 검색할 문자열
   String str = 'pattern is pattern';
@@ -16,24 +18,4 @@ void main() {
   printMatch(firstMatch);
   printMatches(allMatches);
   print(hasMatch);
-}
-
-void printMatches(Iterable<RegExpMatch> matches) {
-  for (RegExpMatch match in matches) {
-    printMatch(match);
-  }
-}
-
-void printMatch(RegExpMatch? match) {
-  if (match == null) {
-    return;
-  }
-
-  print('''
-  start       : ${match.start},
-  end         : ${match.end},
-  pattern     : ${match.pattern},
-  groupCount  : ${match.groupCount},
-  input       : ${match.input},
-  ''');
 }
