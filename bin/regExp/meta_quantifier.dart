@@ -39,4 +39,11 @@ void main() {
   RegExp regExpQuant7 = RegExp(r'a{2,}');
 
   printMatches(regExpQuant7.allMatches(str1));
+
+  // 수량자 + 서브패턴
+  RegExp regExpQuant8 = RegExp(r'(abc)+');
+
+  String str2 = 'abcabdfkwjekabcabc';
+
+  printMatches(regExpQuant8.allMatches(str2));
 }
