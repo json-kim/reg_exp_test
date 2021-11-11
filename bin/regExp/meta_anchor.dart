@@ -1,7 +1,7 @@
 import 'print_match.dart';
 
 void main() {
-  // 위치 고정 앵커 : 위치를 검색 anchor ^: 행의 처음, $: 행의 마지막
+  // 위치 고정 앵커 : 위치를 검색 anchor ^: 행의 처음위치, $: 행의 마지막위치
   // 패턴과 ^, $를 같이 사용하면 처음 나오는 결과, 마지막 결과로 사용 가능하다.
   RegExp regExpAnchor1 = RegExp(r'^');
 
@@ -15,7 +15,7 @@ void main() {
 
   // 특정 용도 앵커 : \와 순수 문자를 조합시킨 앵커
   // \b, \B 단어 경계, 단어 경계를 제외한 위치
-  RegExp regExpAnchor3 = RegExp(r'\b');
+  RegExp regExpAnchor3 = RegExp(r'\B');
 
   printMatches(regExpAnchor3.allMatches(str1));
 
@@ -36,7 +36,7 @@ void main() {
 
   // \s 공백문자
   // \S \s 제외한 모든 문자
-  RegExp regExpAnchor6 = RegExp(r'\s');
+  RegExp regExpAnchor6 = RegExp(r'\S');
 
   printMatches(regExpAnchor6.allMatches(str2));
 

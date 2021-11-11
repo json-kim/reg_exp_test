@@ -6,13 +6,11 @@ void main() {
 
   String str = 'pattern is pattern';
 
-  printMatch(regExpFirst.firstMatch(str));
   printMatches(regExpFirst.allMatches(str));
 
   // '$' 앞에 오는 패턴을 검색하여 마지막 결과를 찾음
   RegExp regExpLast = RegExp(r'pattern$');
 
-  printMatch(regExpLast.firstMatch(str));
   printMatches(regExpLast.allMatches(str));
 
   // 메타문자 찾기 \(백슬래시) 사용
