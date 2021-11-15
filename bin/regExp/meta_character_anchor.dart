@@ -1,14 +1,14 @@
 import 'print_match.dart';
 
 void main() {
-  // '^' 뒤에 오는 패턴을 검색하여 첫번째 결과를 찾음
+  // '^' 문자열의 처음에 패턴이 있는지 검색
   RegExp regExpFirst = RegExp(r'^pattern');
 
-  String str = 'pattern is pattern';
+  String str = 'hi pattern is pattern';
 
   printMatches(regExpFirst.allMatches(str));
 
-  // '$' 앞에 오는 패턴을 검색하여 마지막 결과를 찾음
+  // '$' 문자열의 끝에 패턴이 있는지 검색
   RegExp regExpLast = RegExp(r'pattern$');
 
   printMatches(regExpLast.allMatches(str));
